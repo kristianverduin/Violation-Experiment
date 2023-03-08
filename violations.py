@@ -129,6 +129,9 @@ def createSchedules(nrTeams, n):
     for i in range(n):
         schedule = createRandomSchedulePairs(nrTeams)
         violations = checkScheduleConstraints(schedule, nrTeams)
+        
+        print(schedule)
+        print(violations)
 
         homeAway.append(violations[0])
         repeat.append(violations[1])
@@ -138,15 +141,18 @@ def createSchedules(nrTeams, n):
 
     time = datetime.now()-start
     time = time.total_seconds()
-
-    totalViolations = [homeAway, repeat, robin, mismatch, selfGames]
-    outF = open(PATH + "\Results\Violations\Violations" + str(nrTeams) + ".txt", "w")
-    np.savetxt(outF, totalViolations, fmt='%i', delimiter=',')
-    outF.close()
     
-    outF= open(PATH + "\Results\Times\Seconds" + str(nrTeams) + ".txt", "w")
-    np.savetxt(outF, [time], delimiter=',')
-    outF.close()
+    print(time)
+
+    #Used to save all violations in seperate file
+    #totalViolations = [homeAway, repeat, robin, mismatch, selfGames]
+    #outF = open(PATH + "\Results\Violations\Violations" + str(nrTeams) + ".txt", "w")
+    #np.savetxt(outF, totalViolations, fmt='%i', delimiter=',')
+    #outF.close()
+    
+    #outF= open(PATH + "\Results\Times\Seconds" + str(nrTeams) + ".txt", "w")
+    #np.savetxt(outF, [time], delimiter=',')
+    #outF.close()
 
     return totalViolations
 
