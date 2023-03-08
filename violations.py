@@ -124,7 +124,7 @@ def createSchedules(nrTeams, n):
     repeat = []
     robin = []
     mismatch = []
-    self = []
+    selfGames = []
 
     for i in range(n):
         schedule = createRandomSchedulePairs(nrTeams)
@@ -134,14 +134,14 @@ def createSchedules(nrTeams, n):
         repeat.append(violations[1])
         robin.append(violations[2])
         mismatch.append(violations[3])
-        self.append(violations[4])
+        selfGames.append(violations[4])
 
     time = datetime.now()-start
     time = time.total_seconds()
 
-    totalViolations = [homeAway, repeat, robin, mismatch, self]
+    totalViolations = [homeAway, repeat, robin, mismatch, selfGames]
     outF = open(PATH + "\Results\Violations\Violations" + str(nrTeams) + ".txt", "w")
-    np.savetxt(outF, totalViolations, delimiter=',')
+    np.savetxt(outF, totalViolations, fmt='%i', delimiter=',')
     outF.close()
     
     outF= open(PATH + "\Results\Times\Seconds" + str(nrTeams) + ".txt", "w")
