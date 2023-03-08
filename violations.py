@@ -140,11 +140,11 @@ def createSchedules(nrTeams, n):
     time = time.total_seconds()
 
     totalViolations = [homeAway, repeat, robin, mismatch, self]
-    outF = open(PATH + "\Results\Violations\Violationstest" + str(nrTeams) + ".txt", "w")
+    outF = open(PATH + "\Results\Violations\Violations" + str(nrTeams) + ".txt", "w")
     np.savetxt(outF, totalViolations, delimiter=',')
     outF.close()
     
-    outF= open(PATH + "\Results\Times\Secondstest" + str(nrTeams) + ".txt", "w")
+    outF= open(PATH + "\Results\Times\Seconds" + str(nrTeams) + ".txt", "w")
     np.savetxt(outF, [time], delimiter=',')
     outF.close()
 
