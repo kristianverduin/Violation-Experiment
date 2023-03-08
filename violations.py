@@ -48,7 +48,7 @@ def checkScheduleConstraints(schedule, nrTeams):
                 if abs(schedule[round, team]) == abs(schedule[round-1, team]):
                     violations[1] += 1
 
-            #Check if the opponent also has the current team as opponent (matches are paires)
+            #Check if the opponent also has the current team as opponent (matches are paired)
             if team != abs(schedule[round, abs(schedule[round, team])-1])-1:
                 violations[3] += 1
 
