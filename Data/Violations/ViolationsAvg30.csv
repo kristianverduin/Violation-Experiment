@@ -1,0 +1,4 @@
+Constraint,Average,Maximum,Minimum,Standard deviation,Median
+maxStreak,206.255423,319.0,124.0,19.85278630548042,206.0
+noRepeat,58.951828,122.0,14.0,10.861412406239625,58.0
+Double round-robin,1250.947818,1500.0,1024.0,47.40001532741182,1250.0
