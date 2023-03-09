@@ -2,17 +2,13 @@
 
 This repo contains the code and data used for the paper _Why is the traveling tournament problem not solved with genetic algorithms?_
 
-- - - -
-
-### Code
+## Code
 
 The script `violations.py` is used to generate the random schedules.
 
 Run the script using `python violations.py [nr_teams] [nr_schedules]`
 
-- - - -
-
-### Data
+## Data
 
 The data that was used is contained in the `Data` folder.
 
