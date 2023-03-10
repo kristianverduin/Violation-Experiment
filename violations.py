@@ -154,8 +154,6 @@ def createSchedules(nrTeams, n):
     #np.savetxt(outF, [time], delimiter=',')
     #outF.close()
 
-    return totalViolations
-
 if int(sys.argv[1]) % 2 == 0:
     createSchedules(int(sys.argv[1]), int(sys.argv[2]))
 else:
