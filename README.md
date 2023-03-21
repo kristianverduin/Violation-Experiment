@@ -1,6 +1,6 @@
 # Violation-Experiment
 
-This repo contains the code and data used for the paper _Why is the traveling tournament problem not solved with genetic algorithms?_
+This repo contains the code and data used for the paper _Why is the traveling tournament problem not solved with genetic algorithms?_ by Kristian Verduin, Thomas Weise and Daan van den Berg.
 
 ## Code
 
@@ -12,4 +12,4 @@ Run the script using `python violations.py [nr_teams] [nr_schedules]`
 
 The data that was used is contained in the `Data` folder.
 
-Due to the size of the data, only a summary of the original data is available.
+Due to the size of the data only a summary of the original data is available.
